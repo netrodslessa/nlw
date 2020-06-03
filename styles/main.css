@@ -3,6 +3,7 @@
     /* aqui podemos declarar variáveis */
     --title-color: #322153;
     --primary-color: #34cb79;
+    --input-color: #f0f0f5;
 }
 */*referencia a todos os seletores*/ {
     margin: 0;
@@ -17,7 +18,7 @@ html{
 }
 
 body{
-    background: #f0f0f5;
+    background: var(--input-color);
     -webkit-font-smoothing:antialiased;/*melhora a visualização da fonte*/
 }
 

@@ -19,16 +19,15 @@
     <title>Ecoleta</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <!-- responsive sempre fica por último -->
+    <link rel="stylesheet" href="styles/responsive.css">
 </head>
 
 <body>
     <!-- O html é bastante semantico, facilita a busca pelo robô de busca do Google -->
     <div id="page-home">
-
-
-
         <!--  -->
         <div class='content'>
             <header>
@@ -47,11 +46,31 @@
                 <p>ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
                 <a href="#">
                     <span></span>
-                    <strong>Pesquisar pontos de coleta</strong> 
+                    <strong>Pesquisar pontos de coleta</strong>
                 </a>
             </main>
         </div>
     </div>
+
+    <div id="modal" class='hide'>
+        <div class="content">
+            <div class="header">
+                <h1>Pontos de coleta</h1>
+                <a href="#">Fechar</a>
+            </div>
+            <form action="search-results.html">
+                <!-- label -> usado com acessibilidade também -->
+                <label for="search">Cidade</label>
+                <div class="search field">
+                    <input type="text" name="search" placeholder="Pesquise por cidade">
+                    <button>
+                        <img src="assets/search.svg" alt="Buscar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
