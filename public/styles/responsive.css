@@ -2,58 +2,70 @@
 @media (max-width: 900px){
     #page-home{
         height:80vh;
-        background-position-X: 70vw;
+        background-position-X: 80vw;
     }
     #page-home .content {
         align-items: center;
         text-align: center;
     }
-    #page-home header a{
+    #page-home header {
+        /* por fora continua block(pegando a linha toda)*/ 
+        margin-top: 10px; 
+   }
+   #page-home header a{
         position: absolute;/*coloca uma camada acima*/
-        bottom: 48px;
+        bottom: 0;
         left: 50%;
-        transform: translateX(-50%)/* move o elemento no eixo X*/
+        transform: translateX(-50%);/* move o elemento no eixo X*/
     }
     #page-home main{
         align-items: center;
     }
+
     #page-search-results .cards{
         grid-template-columns: 1fr;
     }
     #page-search-results .cards img{
         height: 200px
     }
-    #page-create-point{
-        width: 90%;
-        max-width: 800px;
-        /* Alinhamento de caixa (pelo lado de fora) */
-        margin: 0 auto;
+    #page-create-point .field-group{
+        flex-direction: column;
+        
+    }
+    #page-create-point form .field-group .field + .field{
+        margin-left: 0;
     }
 
-    #page-create-point form fieldset{
-        max-width: 800px;
-    }
     #page-create-point form h1{
         text-align: center;
+        margin-bottom: -30px;
     }
-    #page-create-point form{
-        max-width: 300px;
+    #page-create-point form legend{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: none;
+        align-items: center;
+        width: 100%;
+    }
+    #page-create-point form legend h2{
+        font-size: 24px;
+
+    }
+    
+    #page-create-point form legend span{
+        font-size: 12px;
+        color: var(--title-color)
     }
     #page-create-point .items-grid{
         display: grid;/*Multidimencionais*/
-        grid-template-columns: 1fr;/* fraciona o espaço colocando, neste caso, 3 colunas*/
-        gap: 16px; /*para separar os itens do grid*/
+        grid-template-columns: 1fr 1fr;/* fraciona o espaço colocando, neste caso, 3 colunas*/
+        gap: 10px; /*para separar os itens do grid*/
     }
     #page-create-point form button{
-       left: 50%;
-       transform: translateX(-50%)
+        width: 100%;
     }
-    #page-create-point .field{
-        width: 80%;
-    }
-    #page-create-point .field input{
-        width: 50%;
-    }
+
 }
 
 @media (min-width: 1700px){
@@ -63,9 +75,3 @@
 
 }
 
-@media (max-height: 760px){
-    #page-home{
-        background-position-Y: 200px;
-     }
-
-}

@@ -1,76 +1,42 @@
-<!DOCTYPE html>
-<!-- Tag HTML -->
-<html lang="pt-br">
-<!-- lang="pt-br" => atributo da tag -->
-<!-- 
-    HiperTexr
-        hiper texto (links)
-    Markup
-        marcação de testo
-    Language
-        liguagem
+{% extends "layout.html" %}
 
-    Liguagem de marcação de texto
- -->
+{% set pageId = "page-home" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecoleta</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+{% block styles %}
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/modal.css">
-    <!-- responsive sempre fica por último -->
-    <link rel="stylesheet" href="styles/responsive.css">
-</head>
+{% endblock styles %}
+<!-- O html é bastante semantico, facilita a busca pelo robô de busca do Google -->
+{% block content %}
 
-<body>
-    <!-- O html é bastante semantico, facilita a busca pelo robô de busca do Google -->
-    <div id="page-home">
-        <!--  -->
-        <div class='content'>
-            <header>
-                <!-- cabeçalho -->
-                <img src="assets/logo.svg" alt="logomarca">
-                <a href="create-point.html">
-                    <span></span><!-- Por pafrão, span vem com display: inline -->
-                    Cadastre um ponto de coleta
-                </a>
-            </header>
-            <main>
-                <!-- Contem as informações principais do documento -->
+    <!-- -->
+    <div class='content'>
+        <header>
+            <!-- cabeçalho -->
+            <a href="/"><img src="assets/logo.svg" alt="logomarca"></a>
+            <a href="create-point">
+                <span></span>
+                <!-- Por pafrão, span vem com display: inline -->
+                Cadastre um ponto de coleta
+            </a>
+        </header>
+        <main>
+            <!-- Contem as informações principais do documento -->
 
-                <h1>Seu marcketplace de coleta de resíduos.</h1>
+            <h1>Seu marcketplace de coleta de resíduos.</h1>
 
-                <p>ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
-                <a href="#">
-                    <span></span>
-                    <strong>Pesquisar pontos de coleta</strong>
-                </a>
-            </main>
-        </div>
+            <p>ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a>
+        </main>
     </div>
+{% endblock content %}
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
 
-    <div id="modal" class='hide'>
-        <div class="content">
-            <div class="header">
-                <h1>Pontos de coleta</h1>
-                <a href="#">Fechar</a>
-            </div>
-            <form action="search-results.html">
-                <!-- label -> usado com acessibilidade também -->
-                <label for="search">Cidade</label>
-                <div class="search field">
-                    <input type="text" name="search" placeholder="Pesquise por cidade">
-                    <button>
-                        <img src="assets/search.svg" alt="Buscar">
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
+{% block scripts %}
     <script src="scripts/index.js"></script>
-</body>
-
-</html>
+{% endblock scripts %}

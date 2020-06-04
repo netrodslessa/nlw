@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Tag HTML -->
+<html lang="pt-br">
+    <!-- lang="pt-br" => atributo da tag -->
+    <!-- HiperTexr hiper texto (links) Markup marcação de testo Language liguagem Liguagem de marcação de texto -->
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block title %}
+            <title>Ecoleta</title>
+        {% endblock title %}
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- responsive sempre fica por último -->
+
+        <link rel="stylesheet" href="styles/responsive.css">
+        {% block styles %}{% endblock styles %}
+    </head>
+
+    <body>
+        <!-- O html é bastante semantico, facilita a busca pelo robô de busca do Google -->
+        <div id="{{ pageId }}">
+            <!-- -->
+            {% block content %}{% endblock content %}
+        </div>
+        {% block modal %}{% endblock modal %}
+        {% block scripts %}{% endblock scripts %}
+    </body>
+
+</html>
