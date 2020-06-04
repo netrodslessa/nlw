@@ -23,6 +23,37 @@
     #page-search-results .cards img{
         height: 200px
     }
+    #page-create-point{
+        width: 90%;
+        max-width: 800px;
+        /* Alinhamento de caixa (pelo lado de fora) */
+        margin: 0 auto;
+    }
+
+    #page-create-point form fieldset{
+        max-width: 800px;
+    }
+    #page-create-point form h1{
+        text-align: center;
+    }
+    #page-create-point form{
+        max-width: 300px;
+    }
+    #page-create-point .items-grid{
+        display: grid;/*Multidimencionais*/
+        grid-template-columns: 1fr;/* fraciona o espaço colocando, neste caso, 3 colunas*/
+        gap: 16px; /*para separar os itens do grid*/
+    }
+    #page-create-point form button{
+       left: 50%;
+       transform: translateX(-50%)
+    }
+    #page-create-point .field{
+        width: 80%;
+    }
+    #page-create-point .field input{
+        width: 50%;
+    }
 }
 
 @media (min-width: 1700px){
