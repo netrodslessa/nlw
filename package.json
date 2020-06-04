@@ -1,0 +1,21 @@
+{
+  "name": "nlw",
+  "version": "1.0.0",
+  "description": "Semana Next Level week",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netrodslessa/nlw.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netrodslessa/nlw/issues"
+  },
+  "homepage": "https://github.com/netrodslessa/nlw#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
