@@ -51,7 +51,7 @@ for (const item of itemsToColect) {
 }
 
 // pegar o campo escondido com os itens selecionados
-const collectedItems = document.querySelector('input[name=]items')
+const collectedItems = document.querySelector('input[name=item]')
 
 // selecionando items dos itens de coleta
 let selectedItems = []
@@ -67,6 +67,7 @@ function handleSelectedItems(e) {
 
     // dataset.id pega o valor do id
     const itemId = itemLi.dataset.id
+    //console.log("Item ID: ", itemId) //para testar o que tem no itemid
 
     // verificar se tem itens selecionados, se sim, 
     // pegar os itens selecionados
@@ -89,8 +90,9 @@ function handleSelectedItems(e) {
         //adicionar à seleção
         selectedItems.push(itemId)
     }
-    // console.log(selectedItems)mostra o que foi selecionado
 
+    // console.log(selectedItems)mostra o que foi selecionado
+    // usar como uma das formas de teste de lógica o console.log
     // atualizar o campo escondido com os itens selecionados
     collectedItems.value = selectedItems;
 }

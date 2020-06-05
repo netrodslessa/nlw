@@ -74,3 +74,17 @@
     background-color: #2fb85e;
     transition: 400ms;
 }
+
+/* Isso é para o modal point-created */
+
+#modal.point{
+    flex-direction: column;
+}
+#modal.point h1{
+    margin-top: 28px;
+    color: white;
+    font-size: 20pt;
+}
+#modal.point-error img{
+    width:80px;
+}

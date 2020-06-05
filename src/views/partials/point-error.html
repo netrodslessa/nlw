@@ -1,0 +1,15 @@
+{% block styles %}
+    <link rel="stylesheet" href="styles/modal.css">
+{% endblock styles %}
+<div id="modal" class="point-error point">
+    <img src="/assets/error.png" alt="Erro ao realizar cadastro">
+    <h1>Erro ao realizar cadastro</h1>
+</div>
+</div>
+
+<script>
+// delay automático de 2 segundos para voltar para home
+setTimeout(() => {
+    window.location = "create-point" // faz a localização da janela ser a barra
+}, 2000)
+</script>
